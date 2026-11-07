@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flotación proporcional | Educamundo</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<header><p>UNIDAD EDUCATIVA BILINGÜE EDUCAMUNDO · MATEMÁTICAS · 7mo EGB “B”</p><h1>Flotación Proporcional</h1><p>Matemática en Acción — Simulador interactivo de prismas</p></header>
+<main>
+<section class="panel controls"><h2>1. Selecciona el prisma</h2><div class="fields"><label>Material<select id="material"><option>Pancacoa</option><option>Cartón corrugado</option><option>Espumaflex</option></select></label><label>Tamaño<select id="modelo"><option>Pequeño</option><option>Mediano</option><option>Grande</option></select></label></div>
+<label class="range">Masa adicional: <strong id="masaLabel">0 g</strong><input id="extra" type="range" min="0" max="3000" step="5" value="0"></label>
+<label class="range">Volumen: <strong id="volLabel">100 % del original</strong><input id="factor" type="range" min="50" max="150" step="5" value="100"></label>
+<button id="reset">Reiniciar experimento</button><p class="note">Los controles modifican un modelo matemático idealizado, no los resultados medidos en el aula.</p></section>
+<section class="panel"><h2>2. Prisma dentro del agua</h2><div class="scene"><svg viewBox="0 0 460 350" role="img" aria-label="Simulación de prisma rectangular en un recipiente con agua"><defs><linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#8de3ff" stop-opacity=".5"/><stop offset="1" stop-color="#1487ca" stop-opacity=".72"/></linearGradient></defs><path d="M80 38V305H380V38" fill="none" stroke="#577f9c" stroke-width="7" stroke-linejoin="round"/><rect x="84" y="145" width="292" height="156" fill="url(#water)"/><path d="M84 145Q108 137 132 145T180 145T228 145T276 145T324 145T376 145" fill="none" stroke="#16a6df" stroke-width="3"/><g id="prism" transform="translate(0 0)"><rect id="front" x="170" y="118" width="108" height="55" fill="#dbac67" stroke="#80562c" stroke-width="2"/><path id="top" d="M170 118L191 103H299L278 118Z" fill="#f4d8a2" stroke="#80562c" stroke-width="2"/><path id="side" d="M278 118L299 103V158L278 173Z" fill="#a87d46" stroke="#80562c" stroke-width="2"/></g><g fill="#e6faff" opacity=".7"><circle cx="116" cy="210" r="4"/><circle cx="345" cy="260" r="5"/><circle cx="133" cy="280" r="3"/></g><text x="230" y="331" text-anchor="middle" fill="currentColor" font-size="16">Agua dulce · densidad ≈ 1 g/cm³</text></svg></div><div id="status" class="status" aria-live="polite"></div><p class="note">La posición del prisma es ilustrativa. El porcentaje calculado es de <strong>volumen desplazado</strong>, no una medida directa de altura sumergida.</p></section>
+<section class="panel results"><h2>3. Resultados matemáticos</h2><div class="metrics"><div><small>Masa total</small><strong id="mass">—</strong></div><div><small>Volumen exterior</small><strong id="volume">—</strong></div><div><small>Densidad promedio</small><strong id="density">—</strong></div><div><small>Volumen sumergido teórico</small><strong id="submerged">—</strong></div></div><p class="formula">Densidad promedio = masa ÷ volumen</p><p id="calculation"></p></section>
+<section class="panel"><h2>4. Observaciones del proyecto</h2><p id="observed"></p><p class="note">Los registros de flotación del proyecto y la predicción idealizada son diferentes: la absorción de agua, el aire encerrado y la forma de construcción pueden modificar los resultados reales.</p></section>
+</main><footer>Proyecto escolar · Simulación educativa · No sustituye las mediciones experimentales</footer>
+</body></html>
